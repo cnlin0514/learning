@@ -1,0 +1,156 @@
+html {
+    overflow: hidden;
+}
+body {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #333;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    overflow: hidden;
+}
+.container {
+    /*width: 100%;*/
+    border: 1px solid #ccc;
+    background: url(../images/wx.jpg) repeat-x;
+
+}
+.swiper1 {
+    width: 100%;
+    border-top: 1px solid #EDEEF0;
+
+}
+.swiper1 .selected {
+    color: #ec5566;
+    border-bottom: 2px solid #ec5566;
+}
+.swiper1 .swiper-slide {
+    text-align: center;
+    font-size: 16px;
+    height: 50px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+.swiper2 {
+    width: 100%;
+}
+.swiper2 .swiper-slide {
+    height: calc(100vh - 50px);
+    background-color: #ccc;
+    color: #000000;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+}
+.content{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.item{
+    position: relative;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    display: block;
+    border-bottom: 1px solid skyblue;
+
+}
+.close_btn{
+    float: right;
+    margin-right: 10px;
+}
+#UpLayer span{
+    /*border:#fff 1px solid;*/
+    width:80px;
+    padding:0 5px;
+    line-height:20px;
+    display:block;
+}
+#UpLayer{
+    z-index: 999;
+    position: relative;
+    /*top: -27px;*/
+    width: 50px;
+    float: right;
+    right: 30px;
+    top: 4px;
+    text-align: center;
+}
+#UpLayer ul{
+    display:none;
+    position:absolute;
+    border:#ccc 1px solid;
+    width:80px;
+    padding:5px;
+    line-height:20px;
+    background:#f1f1f1;
+    margin:-1px 0 0 0;
+}
+#UpLayer ul li{
+    list-style: none;
+    border-bottom:#ccc 1px dashed;
+}
+.from{
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.feedback{
+    background-color: #cccccc;
+    position: relative;
+    height: 30px;
+    float: right;
+    width: 40px;
+}
+.delete {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("/static/images/delete .png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    right: -20px;
+    top: -10px;
+}
+.lianjie {
+    text-decoration: none;
+}
+/*病案首页弹窗*/
+.box {
+    /*text-align: center;*/
+    margin:0 auto;
+    width:20px;
+    line-height:24px;
+    position: fixed;/*这里一定要设置*/
+    z-index: 999999;/*这里是该元素与显示屏的距离，据说越大越好，但是我也没有看到效果，因为没有它也是可以的*/
+    -webkit-transition: .5s ease-in-out;/* css的transition允许css的属性值在一定的时间内从一个状态平滑的过渡到另一个状态 */
+    -moz-transition: .5s ease-in-out;/*这里为了兼容其他浏览器*/
+    -o-transition: .5s ease-in-out;
+}
+.demo {
+    background-color: #4f4f4f;
+    border: 1px solid #333333;
+    margin:0 auto;
+    width:20px;
+    line-height:24px;
+    margin-top: 500px;
+    /*margin-right: 5px;*/
+}
