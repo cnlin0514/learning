@@ -21,9 +21,14 @@ def login():
             'errorText':'用户名或密码错误'
         })
     if result.check_password(password):
-        return jsonify({
-            'flag': 1
-        })
+        if username is '':
+            return jsonify({
+                'errorText':'请输入用户名和密码'
+            })
+        else:
+            return jsonify({
+                'flag': 1
+            })
 
 
 @user.route('/forget',methods=["GET","POST"])
@@ -70,4 +75,17 @@ def main_page():
 
 @user.route('/index',methods=["GET","POST"])
 def index():
+    return render_template("index.html")
+
+# 绑定病案首页
+@app.route('/index',methods=["GET","POST"])
+def index():
+    name = request.form.get('name')
+    id_number = request.form.get('id_number')
+    telephone = request.form.get('telephone')
+    print(name)
+    print(id_number)
+    newUser = MRhomepage(name=name,id_number=id_number,telephone=telephone)
+    db.session.add(newUser)
+    db.session.commit()
     return render_template("index.html")
