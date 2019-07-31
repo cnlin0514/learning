@@ -100,6 +100,27 @@
 
 </div>
 <script>
+    //记录用户浏览页面时间
+    var time,f_time;
+    window.onload = function () {
+        var flag = localStorage.getItem("flag");
+        if (flag==1){
+            var returnTime = new Date().getTime();
+            time =returnTime - localStorage.getItem("outTime");
+            localStorage.setItem("time",time);
+            console.log(time);
+            localStorage.removeItem("flag");
+            localStorage.removeItem("outTime");
+        }
+    }
+    function getOutTime() {
+        //  需要获得文章id
+        var outTime = new Date().getTime();
+        localStorage.setItem("outTime",outTime);
+        localStorage.setItem("flag","1");
+    }
+    f_time = localStorage.getItem("time");
+    
     // 病案首页弹窗
     var w,h,className;
     function getSrceenWH(){
