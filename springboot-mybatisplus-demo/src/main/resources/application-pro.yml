@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: pro
+
+logging:
+  level:
+    root: WARN
+    com.example.demo: INFO
